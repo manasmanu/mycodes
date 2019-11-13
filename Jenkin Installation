@@ -1,0 +1,13 @@
+Choose Amazon Linux AMI
+
+sudo yum update -y
+sudo yum install java-1.8.0-devel -y
+sudo update-alternatives --config java
+# Choose 1 or 2
+sudo update-alternatives --config javac
+# Choose 1 or 2
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key
+sudo yum install jenkins -y
+sudo service jenkins start
+sudo chkconfig jenkins on
